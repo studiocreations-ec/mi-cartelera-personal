@@ -1,0 +1,18 @@
+# AGENTS — Mi Cartelera Personal (reconstrucción E1 + E2)
+- Ninguna funcionalidad sin spec; revisar PRD, historias y criterios antes de modificar.
+- Este proyecto se reconstruyó desde cero porque no se entregó el repositorio Proyecto 3.
+- No afirmar continuidad ni deuda heredada comprobada del repositorio original.
+- E1: búsqueda, detalle, autenticación y gestión de colección.
+- E2: Noche de película, solo `pelicula` `por_ver`, duración TMDB y pausa de 10 minutos.
+- Leer `docs/ESTADO-INICIAL.md`, `docs/prd/PRD.md` y `docs/specs/E2-NOCHE-PELICULA.md`.
+- Mantener dominio sin acceso a la red, servicios aislados de componentes y TypeScript estricto.
+- Nunca añadir `any`, secretos TMDB, service_role o credenciales a fuente/commits.
+- `VITE_` solo URL y clave publicable Supabase; token TMDB solo en Secrets Edge Functions.
+- RLS siempre activada, probar con dos usuarios autenticados; no usar el SQL Editor admin para simular usuarios.
+- Modo demo es ficción y localStorage; jamás presentarlo como seguridad o consulta TMDB real.
+- El hook de Prettier y la skill /commit no equivalen a ejecución de Claude Code.
+- Registrar en `docs/VERIFICACION.md` solo resultados que se hayan observado.
+- Seguir el diseño Bootstrap y las reglas de `DESIGN.md` para toda pantalla.
+- Si se cambia comportamiento, actualizar primero PRD → criterios → spec → código.
+- Ante fallo, no saltarse controles ni desactivar las políticas de acceso.
+- No atribuir las pruebas locales a un despliegue real.
